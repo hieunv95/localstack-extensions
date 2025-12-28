@@ -1,5 +1,5 @@
 """
-Package for mailhog that downloads the mailhog binary from https://github.com/mailhog/MailHog.
+Package for mailhog that downloads the mailhog binary from https://github.com/alerinaldi/MailHog.
 """
 
 import os
@@ -25,7 +25,7 @@ class MailHogPackage(Package):
 
 class MailHogPackageInstaller(GitHubReleaseInstaller):
     def __init__(self, version: str):
-        super().__init__("mailhog", version, "mailhog/MailHog")
+        super().__init__("mailhog", version, "ale-rinaldi/MailHog")
 
     def _get_github_asset_name(self):
         arch = get_arch()
